@@ -23,6 +23,8 @@
  
    		mysql_query( $sql );
 		
+		echo "注册成功";
+		
 		$uid = mysql_insert_id();
 		echo $uid;
 		
