@@ -6,11 +6,15 @@
 		mysql_select_db('dankal');
 		mysql_query("set names 'utf8'");
 		
+ 		if(!(isset($_POST['username'])&&(!empty($_POST['username'])))){
+ 			echo "<script>alert('什么都没获取到');window.location.href='../index.php';</script>";
+ 		}	
+ 		
  		$username = trim($_POST['username']);
 		$password = trim($_POST['password']);
 		$longnum = trim($_POST['longnum']);
 		$shortnum = trim($_POST['shortnum']);
-
+		
 		echo $username; 
 		
 		$sql = "insert into account( username , password , head , longnum , shortnum) values('$username','$password','none','$longnum','$shortnum')";
