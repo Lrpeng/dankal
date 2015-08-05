@@ -1,5 +1,5 @@
 <?php
-	function checkAdmin($sql){
+	function checkUser($sql){
 		return fetchOne($sql);
 	}
 ?>

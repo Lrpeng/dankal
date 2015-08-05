@@ -8,6 +8,7 @@
 	<script src="../js/register.js" type="text/javascript" charset="utf-8"></script>
 	
 	<body>
-		<a href="admin/register.php">跳转</a>
+		<a href="admin/register.php">跳转到注册页面</a>
+		<a href="admin/login.php">跳转到登录页面</a>
 	</body>
 </html>

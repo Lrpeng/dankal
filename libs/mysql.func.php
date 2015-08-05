@@ -57,7 +57,7 @@
  */
  	function fetchOne($sql,$result_type = MYSQL_ASSOC){
  		$result = mysql_query($sql);
-		$row = mysql_fetch_array($array,$result_type);
+		$row = mysql_fetch_array($result,$result_type);
 		return $row;
  	}
 
