@@ -3,7 +3,7 @@
 	$longnum = $_POST['longnum'];
 	//addslashes() 函数返回在预定义字符之前添加反斜杠的字符串。
 	$longnum	 = addslashes($longnum);
-	$password = $_POST['password'];
+	$password = md5($_POST['password']);
 	$verify = $_POST['verify'];
 	$verify1 = $_SESSION['verify'];
 	if(isset($_POST['autoFlag'])){
@@ -20,12 +20,12 @@
 			}
 			$_SESSION['username'] = $row['username'];
 			$_SESSION['account_id'] = $row['account_id'];
-			alertMes("登录成功","../login_success.php");
+			$mes = "欢迎您".$_SESSION['username']."  <a href = 'logout.php'>退出登录</a>";
 		}else{
 			alertMes("登录失败，重新登录","login.php");
 		}
 	}else{
 		alertMes("验证码错误","login.php");
 	}
-	
+	echo $mes;
 ?>
