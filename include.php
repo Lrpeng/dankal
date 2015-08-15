@@ -10,5 +10,6 @@
 	require_once 'configs.php';
 	require_once 'admin.inc.php';
 	require_once 'common.func.php';
+	require_once 'message.func.php';
 	connect();
 ?>

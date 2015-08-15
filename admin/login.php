@@ -5,7 +5,7 @@
 		<title>Dankal_login</title>
 	</head>
 	<link rel="stylesheet" type="text/css" href="../styles/style.css"/>
-	<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+	<script src="../js/jquery-1.11.2.min.js" type="text/javascript" charset="utf-8"></script>
 	<script type="text/javascript">
 		function reloadCode () {
 			var time = new Date().getTime();
