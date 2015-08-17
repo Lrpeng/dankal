@@ -24,9 +24,12 @@ if (!empty($_POST['longnum'])) {
 				array_push($contacts_print, $temp_arr);
 			}
 
+			$phonebook_one['book_id'] = $value['phonebook_id'];
+			$phonebook_one['book_version'] = $value['phonebook_version'];
 			$phonebook_one['book_name'] = $value['name'];
 			$phonebook_one['book_intr'] = $value['intr'];
 			$phonebook_one['book_logo'] = $value['logo'];
+			
 			$phonebook_one['content'] = $contacts_print;
 			array_push($phonebook_all, $phonebook_one);
 		}

@@ -155,7 +155,7 @@ class upload_img{
 			$this->uniName=$this->getUniName();
 			$this->destination=$this->uploadPath.'/'.$this->uniName.'.'.$this->ext;
 			if(@move_uploaded_file($this->fileInfo['tmp_name'], $this->destination)){
-				return  $this->destination;
+				return  $this->uniName.'.'.$this->ext;
 			}else{
 				$this->error='文件移动失败';
 				$this->showError();
