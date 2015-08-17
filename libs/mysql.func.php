@@ -13,6 +13,7 @@
  * 往数据库插入数据
  */
 	function insert($table,$array){
+		mysql_query("set names 'utf8'");
 		$keys = join(",",array_keys($array));
 		$vals = "'".join("','", array_values($array))."'";
 		$sql = "insert into {$table}($keys) values({$vals})";
@@ -25,6 +26,8 @@
  * update account set username = 'xxx' where account_id = "xxx";
  */
 	function update($table,$array,$where = null){
+		mysql_query("set names 'utf8'");
+		@$str = null;
 	foreach($array as $key => $val){
 		if($str == null){
 			$sep = "";
@@ -34,6 +37,7 @@
 			$str.= $sep.$key."='".$val."'";
 	}
 		$sql = "update {$table} set {$str}".($where == null ? null : " where ".$where);
+		echo $sql;
 		$result = mysql_query($sql);
 		if($result){
 			return mysql_affected_rows();	
@@ -56,6 +60,7 @@
  * 得到一条指定记录
  */
  	function fetchOne($sql,$result_type = MYSQL_ASSOC){
+ 		mysql_query("set names 'utf8'");
  		$result = mysql_query($sql);
 		$row = mysql_fetch_array($result,$result_type);
 		return $row;
@@ -65,6 +70,7 @@
  * 得到结果集的所有记录
  */
  	function fetchAll($sql,$result_type = MYSQL_ASSOC){
+ 		mysql_query("set names 'utf8'");
  		$result = mysql_query($sql);
 		while(@$row = mysql_fetch_array($result,$result_type)){
 			$rows[] = $row;
