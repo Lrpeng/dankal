@@ -10,7 +10,7 @@
 	}
 	//判断短信验证码
 	
-	if($code1 == $_POST['code'] && isset($_POST['code'])){ 
+//	if($code1 == $_POST['code'] && isset($_POST['code'])){ 
 		if(insert($table, $array)){
 			$mes = "注册成功！ <a href = 'login.php'>去登录</a><br/>";
 			$sql = "select * from account where longnum ='{$longnum}'";
@@ -20,9 +20,9 @@
 	 	}else{
 			alertMes("注册失败","register.php");
 		}
-	}else{
-		alertMes("无验证码","register.php");
-	}
+//	}else{
+//		alertMes("无验证码","register.php");
+//	}
 	echo $mes;
 	
 	

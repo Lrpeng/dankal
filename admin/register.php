@@ -23,8 +23,8 @@
 					<label>确认密码</label><input type="password" name="confirm" id="confirm" value="" onchange="checkPasswords()" required="required"/><br />
 					<label>长号</label><input type="tel" name="longnum" id="longnum" value="" required="required" onchange="checkLNum()" maxlength="11" onkeyup="this.value=this.value.replace(/\D/g,'')" onafterpaste="this.value=this.value.replace(/\D/g,'')"/><br />
 					<label>短号</label><input type="text" name="shortnum" id="shortnum" value="" maxlength="6" onkeyup="this.value=this.value.replace(/\D/g,'')" onafterpaste="this.value=this.value.replace(/\D/g,'')"><br />
-					<label>短信验证码</label><input type="text" name="code" id="code" value="" maxlength="6" required="required"/><button onclick="sendMessage()" type="button">发送验证码</button><br />
-					<button onclick="checkCode()" type="button">注册</button>
+					<!--<label>短信验证码</label><input type="text" name="code" id="code" value="" maxlength="6" required="required"/><button onclick="sendMessage()" type="button">发送验证码</button><br />-->
+					<button  type="submit">注册</button>
 				</form>
 		</center>
 	</body>
